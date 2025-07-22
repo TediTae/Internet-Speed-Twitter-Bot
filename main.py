@@ -4,6 +4,7 @@ import time
 
 TWITTER_EMAIL = "YOUR EMAIL ADDRESS"
 TWITTER_PASSWORD = "YOUR PASSWORD"
+PROVIDER_HANDLE = "@YourISP"
 PROMISED_DS = 100
 PROMISED_US = 100
 
@@ -58,8 +59,8 @@ class InternetSpeedTwitterBot:
         log_in_button.click()
         time.sleep(10)
         send_tweet = self.driver.find_element(By.XPATH, "//div[@data-testid='tweetTextarea_0' and @role='textbox']")
-        send_tweet.send_keys(f"{self.down}mbps download and {self.up}mbps upload while i promised {PROMISED_DS}download and"
-                             f"{PROMISED_US}upload. ")
+        send_tweet.send_keys(f"Dear {PROVIDER_HANDLE}, I have {self.down}mbps download and {self.up}mbps upload currently while i promised {PROMISED_DS}download and"
+                             f"{PROMISED_US}upload. Please help me to fix it.")
         time.sleep(2)
         send_tweet_button = self.driver.find_element(By.XPATH, "//button[@role='button' and @data-testid='tweetButtonInline']")
         send_tweet_button.click()
