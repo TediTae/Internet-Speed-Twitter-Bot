@@ -66,4 +66,5 @@ class InternetSpeedTwitterBot:
 
 bot = InternetSpeedTwitterBot()
 bot.get_internet_speed()
-bot.tweet_at_provider()
+if float(bot.down) < float(PROMISED_DS) or float(bot.up) < float(PROMISED_US):
+    bot.tweet_at_provider()
