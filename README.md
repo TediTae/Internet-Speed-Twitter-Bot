@@ -27,13 +27,14 @@ This Python bot automatically checks your internet speed using [Speedtest.net](h
    - pip install selenium
 3. Download ChromeDriver and place it in your PATH.
 
-4. 🧠 Usage
-- Update the following constants with your own info inside the Python file:
-
-  - TWITTER_EMAIL = "your@email.com"
-  - TWITTER_PASSWORD = "yourPassword"
-  - PROMISED_DS = 100  # Promised Download Speed
-  - PROMISED_US = 100  # Promised Upload Speed
+⚙️ Configuration
+- Before running the bot, open the Python file and configure the following:
+   - TWITTER_EMAIL = "your_email@example.com"
+   - TWITTER_PASSWORD = "your_password"
+   - PROVIDER_HANDLE = "@YourISP"  # ← Replace with your ISP's Twitter handle
+   -  PROMISED_DS = 100  # Promised download speed in Mbps
+   - PROMISED_US = 100  # Promised upload speed in Mbps
+   - 💡 Make sure to update PROVIDER_HANDLE with your internet provider’s official Twitter handle (e.g., @Comcast, @VodafoneTR, @TurkTelekom, etc.), so they get tagged in your complaint tweet.
 5. Then run the script
 
 ## It will:
